@@ -73,11 +73,3 @@ $ curl -X POST -H "Content-Type: application/json" -d '{"name": "Joanna"}' http:
 
 {"name":"Joanna","times":441}
 ```
-
-### 5. Performance
-
-Performance is very important in systems like this application. The application should respond to requests in a fast way while being able to support a high amount of concurrent requests. While there are many different ways in which we can implement a typeahead system, not all of them will have the same performance. There is a particular data structure that provides very fast responses without requiring a lot of memory: the **prefix tree** (also known as Trie).
-
-So, with performance in mind, another requirement is to build this system by **implementing a Prefix Tree (or similar structure) adapted to this context**. Note that this also means there will be **no database system in this project**, as the data needed for this system will be stored in this in-memory data structure. A reasonably good implementation of a prefix tree in this context can be more performant than an SQL query in a relational database.
-
-Although there are no more explicit performance related requirements, we encourage you to be mindful of performance when making design and implementation decisions in this task.
