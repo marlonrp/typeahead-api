@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "target": "es2018",
+    "lib": ["es5", "es6", "ES2018"],
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "allowJs": false,
+    "outDir": "./dist",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "strictPropertyInitialization": false,
+    "paths": {
+      "@app/*": ["./*"],
+      "@app/src/*": ["./src/*"],
+      "@app/controllers/*": ["./src/controllers/*"],
+      "@app/core/*": ["./src/core/*"],
+      "@app/entities/*": ["./src/entities/*"],
+      "@app/repositories/*": ["./src/repositories/*"],
+      "@app/server/*": ["./src/server/*"],
+      "@app/services/*": ["./src/services/*"]
+    }
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"],
+  "ts-node": {
+    "files": true,
+    "require": ["tsconfig-paths/register"]
+  }
+}
